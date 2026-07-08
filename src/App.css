@@ -1,0 +1,193 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #eef2ff, #f8f9fc);
+  padding: 30px;
+}
+
+.App {
+  text-align: center;
+}
+
+h1 {
+  text-align: center;
+  font-size: 42px;
+  margin-bottom: 30px;
+  color: #1e293b;
+  font-weight: 700;
+}
+
+.topBar {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.topBar input,
+.topBar select,
+.topBar button {
+  padding: 10px;
+  font-size: 16px;
+}
+
+.topBar button {
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.search {
+  width: 300px;
+  margin-bottom: 25px;
+}
+
+.board {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  align-items: flex-start;
+  margin-top: 20px;
+}
+
+.column {
+  width: 330px;
+  min-height: 550px;
+  background: white;
+  border-radius: 15px;
+  padding: 18px;
+  box-shadow: 0 10px 25px rgba(0,0,0,.08);
+}
+
+.column h2 {
+  margin-bottom: 15px;
+}
+
+.task {
+  padding: 12px;
+  margin-bottom: 12px;
+  border-radius: 8px;
+  text-align: left;
+  background: #fafafa;
+  transition: 0.3s;
+  cursor: grab;
+  user-select: none;
+}
+
+.task:active {
+  cursor: grabbing;
+}
+
+.task:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+}
+
+.task h4 {
+  margin-bottom: 8px;
+}
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 10px;
+}
+
+button {
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  color: white;
+  background: #2563eb;
+  transition: 0.3s;
+  font-weight: 600;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+.delete {
+  background: crimson;
+}
+
+.high {
+  border-left: 8px solid red;
+}
+
+.medium {
+  border-left: 8px solid orange;
+}
+
+.low {
+  border-left: 8px solid green;
+}
+
+.editInput {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
+}
+
+.priorityBadge {
+  display: inline-block;
+  padding: 5px 12px;
+  margin: 10px 0;
+  border-radius: 20px;
+  color: white;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.priorityBadge.high {
+  background: #e53935;
+}
+
+.priorityBadge.medium {
+  background: #fb8c00;
+}
+
+.priorityBadge.low {
+  background: #43a047;
+}
+
+@media (max-width: 1000px) {
+  .board {
+    flex-direction: column;
+    align-items: center;
+  }
+
+.column {
+  min-height: 500px;
+  transition: background 0.3s;
+}
+
+  .topBar {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .search {
+    width: 90%;
+  }
+}
+
+.dragHandle{
+    background:#2563eb;
+    color:white;
+    padding:6px;
+    border-radius:6px;
+    margin-bottom:10px;
+    cursor:grab;
+    text-align:center;
+    font-size:14px;
+}
